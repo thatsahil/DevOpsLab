@@ -16,8 +16,8 @@ pipeline {
 
         stage('Package') {
             steps {
-                // Generate build-info.txt with execution date/time
-                sh 'echo "Build executed on $(date)" > build-info.txt'
+                // Windows Batch command replacing 'sh'
+                bat 'echo Build executed on %DATE% %TIME% > build-info.txt'
             }
         }
     }
